@@ -1,0 +1,5 @@
+apache /etc/apache/httpd.conf config file declares a non standard:
+MIMEMagicFile /usr/share/misc/file/magic.mime
+and it should be changed to:
+MIMEMagicFile /usr/share/file/magic.mime
+----
