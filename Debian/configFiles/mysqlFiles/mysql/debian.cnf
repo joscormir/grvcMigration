@@ -1,0 +1,6 @@
+# Automatically generated for Debian scripts. DO NOT TOUCH!
+[client]
+host     = localhost
+user     = debian-sys-maint
+password = VkhrueXyfh8sS5hV
+socket   = /var/run/mysqld/mysqld.sock
