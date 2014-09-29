@@ -22,8 +22,43 @@ fi
 echo "Haciendo copia de run level de nivel 2..."	
 
 if ! ls -l /etc/rc2.d >> /home/joscormir/runLevels2List.txt ; then 
-	echo "no se ha podido copiar run level 2"
+	echo "no se ha podido copiar run level 2 porque no existe el comando"
 fi
+
+#-------------------------------------------------------------------------
+#Esta parte suelen tenerla solo los servidores de Ubuntu pero es posible que algunas
+#versiones de Debian lo incluyan, por si acaso se encuentran aquí para que se ejecuten si
+#es que el comando existiese.
+echo "respuesta de Upstart si el sistema lo tiene instalado..."	
+
+if ! initctl list >> /home/joscormir/upStartList.txt ; then 
+	echo "no se ha podido copiar upStartList porque no existe el comando"
+fi
+echo "Configuración de upStart..."	
+
+if ! initctl show-config >> /home/joscormir/upStartConfigList.txt ; then 
+	echo "no se ha podido copiar la configuracion upStartList porque no existe el comando"
+fi
+
+ if cp /etc/init /home/joscormir/initDebian.txt ; then
+	echo "se ha copiado el init del sistema" 
+else 
+	echo "no se ha podido copiar el init"
+fi
+# si tenemos un sistema en Debian que adopte un systema de inicializacion del tipo
+#systemd init ejecutamos lo siguiente
+if ! systemctl list-units -t service >> /home/joscormir/systemctlServiceList.txt ; then 
+	echo "no se ha podido copiar la lista de servicios en ctl porque no existe el comando"
+fi
+
+if ! systemctl list-units -t target >> /home/joscormir/systemctlTargetList.txt ; then 
+	echo "no se ha podido copiar la lista de targets en ctl porque no existe el comando"
+fi
+
+if ! systemctl list-unit-files -t service >> /home/joscormir/systemctlAvailableTargetsList.txt ; then 
+	echo "no se ha podido copiar la lista de targets disponibles en ctl porque no existe el comando"
+fi
+
 
 #-------------------------------------------------------------------------
 #puede que haya algunas áreas que no estén configuradas a través del init del sistema
