@@ -14,7 +14,7 @@ echo  "Haciendo copia de los run level de cada servicio..."
 
 if  ! chkconfig --list >> /home/joscormir/runLevelsList.txt ; then 
 	echo "chkconfig no existe y no se ha copiado"
-elif ! sysv-rc-conf --list >> /home/joscormir/runLevelsList.txt 
+elif ! sysv-rc-conf --list >> /home/joscormir/runLevelsList.txt ; then 
 	echo "sysv-rc-conf tampoco existe "
 fi
 
@@ -40,7 +40,7 @@ if ! initctl show-config >> /home/joscormir/upStartConfigList.txt ; then
 	echo "no se ha podido copiar la configuracion upStartList porque no existe el comando"
 fi
 
- if cp /etc/init /home/joscormir/initDebian.txt ; then
+ if cp etc/init /home/joscormir/initDebian.txt ; then
 	echo "se ha copiado el init del sistema" 
 else 
 	echo "no se ha podido copiar el init"
