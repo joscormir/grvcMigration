@@ -40,7 +40,7 @@ if ! initctl show-config >> /home/joscormir/upStartConfigList.txt ; then
 	echo "no se ha podido copiar la configuracion upStartList porque no existe el comando"
 fi
 
- if cp ls -l  /etc/init >> /home/joscormir/initDebian.txt ; then
+ if ls -l  /etc/init >> /home/joscormir/initDebian.txt ; then
 	echo "se ha copiado el init del sistema" 
 else 
 	echo "no se ha podido copiar el init"
