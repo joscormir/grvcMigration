@@ -1,4 +1,4 @@
-#! /bin/bash 
+
 
 pwFile="/home/joscormir/programming/grvcMigration/scripts/users/new_server/passwd"
 pwFileUsers="/home/joscormir/programming/grvcMigration/scripts/users/new_server/passwd.old"  

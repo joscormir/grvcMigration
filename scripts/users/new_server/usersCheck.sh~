@@ -5,6 +5,15 @@
 pwFile="/home/joscormir/programming/grvcMigration/scripts/users/new_server/passwd"
 pwFileUsers="/home/joscormir/programming/grvcMigration/scripts/users/new_server/passwd.old"  
 
+groupFile="/home/joscormir/programming/grvcMigration/scripts/users/new_server/group"
+groupFileUsers="/home/joscormir/programming/grvcMigration/scripts/users/new_server/group.old"
+
+shadowFile="/home/joscormir/programming/grvcMigration/scripts/users/new_server/shadow"
+shadowFileUsers="/home/joscormir/programming/grvcMigration/scripts/users/new_server/shadow.old"
+
+gshadowFile="/home/joscormir/programming/grvcMigration/scripts/users/new_server/gshadow"
+gshadowFileUsers="/home/joscormir/programming/grvcMigration/scripts/users/new_server/gshadow.old"
+
 #comprobación de seguridad
 
 if [ "$(whoami)" != "root" ]; then
