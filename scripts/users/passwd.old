@@ -1,0 +1,106 @@
+mbejar:x:1003:1000:Manuel Bejar,76,,:/home/mbejar:/bin/bash
+imaza:x:1004:1000:Ivan Maza:/home/imaza:/bin/bash
+caba:x:1005:1000:Fernando Caballero Benitez:/home/caba:/bin/bash
+mbejar:x:1006:1000:Manuel Bejar Dominguez:/home/mbejar:/bin/bash
+aollero:x:1007:1000:Anibal Ollero Baturone:/home/aollero:/bin/bash
+merino:x:1008:1000:Luis Merino:/home/merino:/bin/bash
+antidio:x:1009:1000:Antidio Viguria:/home/antidio:/bin/bash
+barrue:x:1013:1000:Begona Arrue:/home/barrue:/bin/bash
+castano:x:1015:1000:Angel Castano:/home/castano:/bin/bash
+fede:x:1021:1000:Federico Cuesta:/home/fede:/bin/bash
+ferruz:x:1022:1000:Joaquin Ferruz Melero:/home/ferruz:/bin/bash
+guiller:x:1023:1000:Guillermo Heredia:/home/guiller:/bin/bash
+jdedios:x:1025:1000:Jose Ramiro Martinez:/home/jdedios:/bin/bash
+nico:x:1027:1000:Nicolas Pena:/home/nico:/bin/bash
+nogales:x:1028:1000:Carlos Nogales:/home/nogales:/bin/bash
+pichaco:x:1029:1000:Francisco Pichaco:/home/pichaco:/bin/bash
+secgrvc:x:1031:1000:Secretaria GRVC:/home/secgrvc:/bin/bash
+spread:x:1032:1000:SPREAD Project:/home/spread:/bin/bash
+rlord:x:1035:1000:Victor Vega:/home/rlord:/bin/bash
+jescap:x:1036:1000:Jesus Capitan Fernandez:/home/jescap:/bin/bash
+marisa:x:1038:1000:Maria Isabel Munoz Carballo:/home/marisa:/bin/bash
+psoriano:x:1040:1000:Pablo Soriano Tapia:/home/psoriano:/bin/bash
+fran:x:1041:1000:Francisco Barragan Rodriguez:/home/fran:/bin/bash
+mistica:x:1042:33:Administrador web:/home/mistica:/bin/bash
+chur:x:1043:1003:David Alejo:/home/chur:/bin/bash
+mamuso:x:1044:1003:Roberto Conde:/home/mamuso:/bin/bash
+mantecon:x:1049:1003:David Mantecon Lopez:/home/mantecon:/bin/bash
+carnicer:x:1050:1000:Rafael Carnicer Torres:/home/carnicer:/bin/bash
+pgilmon:x:1054:1003:Pablo Gil:/home/pgilmon:/bin/bash
+aware:x:1055:1006:AWARE CVS notification system:/home/projects/aware:/bin/bash
+aerosens:x:1056:1006:AEROSENS Project account:/home/projects/aerosens:/bin/bash
+helinspec:x:1057:1006:HELINSPEC Porject account:/home/projects/helinspec:/bin/bash
+spread:x:1058:1006:SPREAD Project account:/home/projects/spread:/bin/bash
+teleagrisol:x:1059:1006:Teleagrisol Project account:/home/projects/teleagrisol:/bin/bash
+comets:x:1060:1006:COMETS Project account:/home/projects/comets:/bin/bash
+cromat:x:1061:1006:CROMAT Project account:/home/projects/cromat:/bin/bash
+cvsuser:x:1000:1007:CVS user account,,,:/home/cvsuser:/bin/bash
+juanjo:x:1062:1003:Juanjo Rebollo:/home/juanjo:/bin/bash
+franreal:x:1064:1003:Francisco Real:/home/franreal:/bin/bash
+sadcom:x:1065:1006:SADCOM Project account:/home/projects/sadcom:/bin/bash
+lumi:x:1066:1000:Iluminada Baturone:/home/lumi:/bin/bash
+urus:x:1067:1000:URUS Project:/home/projects/urus:/bin/bash
+manfredi:x:1068:1000:Jose Antonio Rodriguez Manfredi:/home/manfredi:/bin/bash
+virtual:x:1069:1069::/home/ftp/anonymous:/bin/sh
+josematamoros:x:1070:1003:Jose Matamoros:/home/josematamoros:/bin/bash
+smoke:x:1072:1000:Smoke stuff:/home/projects/smoke:/bin/bash
+cvsnavantia:x:1001:1001:Usuario CVS Navantia,,,:/home/cvsnavantia:/bin/bash
+cvsphantom:x:1002:1002:CVS user Phantom Works,,,:/home/cvsphantom:/bin/bash
+cvsmulti:x:1010:1004:CVS multirobot user,,,:/home/cvsmulti:/bin/bash
+cvsplane:x:1011:1005:CVS plane repository user,,,:/home/cvsplane:/bin/bash
+jacobano:x:1073:1003:Jose Antonio Cobano:/home/jacobano:/bin/bash
+cvsmonster:x:1012:1008:CVS Monster user,,,:/home/cvsmonster:/bin/bash
+adrianjg:x:1075:1003:Adrian Jimenez Gonzalez:/home/adrianjg:/bin/bash
+ugv:x:1076:1010:UGV Project User:/home/ugv:/bin/bash
+sdelaitre:x:1077:1003:sabine delaitre:/home/sdelaitre:/bin/bash
+gabnungue:x:1078:1003:Gabriel Nunez:/home/gabnungue:/bin/bash
+vicente:x:1079:1003:Vicente Payo:/home/vicente:/bin/bash
+irm:x:1014:1011:IRM,,,:/home/irm:/bin/bash
+hcp:x:1016:1012:HCP,,,:/home/hcp:/bin/bash
+uxp:x:1017:1013:UXP,,,:/home/uxp:/bin/bash
+cvsromeo:x:1018:1014:CVS ROMEO,,,:/home/cvsromeo:/bin/bash
+julio:x:1080:1003:Julio Antequera:/home/julio:/bin/bash
+nieves:x:1081:1000:Nieves Pavon:/home/nieves:/bin/bash
+conet:x:1082:1000:CONET Network of Excellence:/home/projects/conet:/bin/bash
+robair:x:1083:1000:Proyecto ROBAIR:/home/projects/robair:/bin/bash
+cvsatlantida:x:1019:1015:CVS ATLANTIDA,,,:/home/cvsatlantida:/bin/bash
+dprodriguez:x:1084:1003:Daniel Perez:/home/dprodriguez:/bin/bash
+cvsugv:x:1020:1017:CVS Proyecto UGV,,,:/home/cvsugv:/bin/bash
+sandino:x:1085:1003:Luis Alberto Sandino:/home/sandino:/bin/bash
+cvssurrey:x:1024:1018:CVS Surrey,,,:/home/cvssurrey:/bin/bash
+cvsexternal:x:1026:1019:CVS with external users,,,:/home/cvsexternal:/bin/bash
+jjacevedo:x:1087:1003:Jose Joaquin Acevedo Banez:/home/jjacevedo:/bin/bash
+jesusm:x:1088:1003:Jesus Martin:/home/jesusm:/bin/bash
+juanmi:x:1089:1003:Juan Miguel Barragan:/home/juanmi:/bin/bash
+hxr:x:1030:1020:,,,:/home/hxr:/bin/bash
+ehuerta:x:1090:1003:Estefania Huerta Guijarro:/home/ehuerta:/bin/bash
+victorvega:x:1091:1003:Victor Vega:/home/victorvega:/bin/bash
+svera:x:1092:1003:Santiago Vera:/home/svera:/bin/bash
+mguerrero:x:1093:1003:Manuel Guerrero:/home/mguerrero:/bin/bash
+mguerrero:x:1094:1003:Manuel Guerrero:/home/mguerrero:/bin/bash
+sempere:x:1095:1003:Alvaro Sempere Plaza:/home/sempere:/bin/bash
+jballesteros:x:1096:1003:Joaquin Ballesteros:/home/jballesteros:/bin/bash
+cvsfrog:x:1033:1021:CVS FROG,,,:/home/cvsfrog:/bin/bash
+cvstesisjballesteros:x:1034:1022:CVS Tesis Joaquin Ballesteros,,,:/home/cvstesisjballesteros:/bin/bash
+jperezlara:x:1097:1003:Javier Perez Lara:/home/jperezlara:/bin/bash
+cvslegs:x:1037:1023:CVS Legs,,,:/home/cvslegs:/bin/bash
+mjosearroyo:x:1098:1003:Maria Jose Arroyo:/home/mjosearroyo:/bin/bash
+htx:x:1039:1024:HTX,,,:/home/htx:/bin/bash
+noeperez:x:1099:1003:Noe Perez Higueras:/home/noeperez:/bin/bash
+cvsq:x:1045:1025:CVS Q,,,:/home/cvsq:/bin/bash
+felramfab:x:1101:1000:Felipe Ramon Fabresse:/home/felramfab:/bin/bash
+rafael:x:1102:1003:Rafael Ramon Vigo:/home/rafael:/bin/bash
+dllorente:x:1103:1003:Domingo Llorente:/home/dllorente:/bin/bash
+chorro:x:1104:1003:Juan Chorro:/home/chorro:/bin/bash
+cvslaser:x:1046:1026:CVS Laser,,,:/home/cvslaser:/bin/bash
+camores:x:1105:1003:Carlos Amores:/home/camores:/bin/bash
+alfmorente:x:1106:1003:Alfonso Morente:/home/alfmorente:/bin/bash
+fballester:x:1107:1003:Felix Ballester:/home/fballester:/bin/bash
+sdoctor:x:1108:1003:Sergio Doctor:/home/sdoctor:/bin/bash
+cfernandez:x:1109:1003:Carmelo Fernandez:/home/cfernandez:/bin/bash
+jorgemunoz:x:1110:1003:Jorge Munoz Morera:/home/jorgemunoz:/bin/bash
+joscormir:x:1111:1003:Jose Enrique Corchado Miralles:/home/joscormir:/bin/bash
+maraver:x:1112:1003:Manuel Maraver:/home/maraver:/bin/bash
+arturotorres:x:1113:1003:Arturo Torres:/home/arturotorres:/bin/bash
+varo:x:1114:1003:Luis Evaristo Caraballo:/home/varo:/bin/bash
+upc:x:1047:1028:Usuario UPC,,,:/home/upc:/bin/bash
