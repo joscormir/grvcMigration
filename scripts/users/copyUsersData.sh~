@@ -9,7 +9,7 @@
 
 #Metemos en limit el valor que encontramos en /etc/passwd de Debian
 
-let limit=115
+let limit=103
 
 #----------------usuarios ---------------------------------#
 

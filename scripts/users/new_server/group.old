@@ -1,0 +1,11 @@
+bluetooth:x:115:
+avahi:x:116:
+lightdm:x:117:
+nopasswdlogin:x:118:
+pulse:x:119:
+pulse-access:x:120:
+scanner:x:121:
+colord:x:122:
+saned:x:123:
+joscormir:x:1000:
+sambashare:x:124:joscormir
