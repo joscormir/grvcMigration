@@ -11,17 +11,17 @@ let limit=1000
 
 #----------------------------------------------------------#
 
-pwFile="/home/joscormir/programming/grvcMigration/scripts/users/new_server/passwd"
-pwFileUsers="/home/joscormir/programming/grvcMigration/scripts/users/new_server/passwd.old"  
+pwFile="/home/joscormir/programming/grvcMigration/scripts/users/passwd"
+pwFileUsers="/home/joscormir/programming/grvcMigration/scripts/users/passwd.old"  
 
-groupFile="/home/joscormir/programming/grvcMigration/scripts/users/new_server/group"
-groupFileUsers="/home/joscormir/programming/grvcMigration/scripts/users/new_server/group.old"
+groupFile="/home/joscormir/programming/grvcMigration/scripts/users/group"
+groupFileUsers="/home/joscormir/programming/grvcMigration/scripts/users/group.old"
 
-shadowFile="/home/joscormir/programming/grvcMigration/scripts/users/new_server/shadow"
-shadowFileUsers="/home/joscormir/programming/grvcMigration/scripts/users/new_server/shadow.old"
+shadowFile="/home/joscormir/programming/grvcMigration/scripts/users/shadow"
+shadowFileUsers="/home/joscormir/programming/grvcMigration/scripts/users/shadow.old"
 
-gshadowFile="/home/joscormir/programming/grvcMigration/scripts/users/new_server/gshadow"
-gshadowFileUsers="/home/joscormir/programming/grvcMigration/scripts/users/new_server/gshadow.old"
+gshadowFile="/home/joscormir/programming/grvcMigration/scripts/users/gshadow"
+gshadowFileUsers="/home/joscormir/programming/grvcMigration/scripts/users/gshadow.old"
 
 #-----------comprobación de seguridad----------------------#
 
@@ -40,7 +40,7 @@ awk -v LIMIT=$limit -F: '($3>=LIMIT) && ($3!=65534)' $groupFile > $groupFileUser
 #Hacemos lo mismo para el fichero de shadow con las contraseñas encriptadas, usando el mismo límite:
 #----------------passwords --------------------------------#
 
-awk -v LIMIT=$limit -F: '($3>=LIMIT) && ($3!=35534) {print $1}' $pwFile | tee - | egrep -f - $shadowFile > $shadowFileUsers
+awk -v LIMIT=$limit -F: '($3>=LIMIT) && ($3!=65534) {print $1}' $pwFile | tee - | egrep -f - $shadowFile > $shadowFileUsers
 
 #----------------group passwords --------------------------#
 
