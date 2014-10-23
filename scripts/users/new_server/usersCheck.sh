@@ -1,3 +1,7 @@
+#! /bin/bash 
+
+#En este script se va a copiar los datos de los usuarios previa comprobación  de que no hay conflicto.
+
 pwFile="/home/joscormir/programming/grvcMigration/scripts/users/new_server/passwd"
 pwFileUsers="/home/joscormir/programming/grvcMigration/scripts/users/new_server/passwd.old"  
 
@@ -10,22 +14,20 @@ shadowFileUsers="/home/joscormir/programming/grvcMigration/scripts/users/new_ser
 gshadowFile="/home/joscormir/programming/grvcMigration/scripts/users/new_server/gshadow"
 gshadowFileUsers="/home/joscormir/programming/grvcMigration/scripts/users/new_server/gshadow.old"
 
+#comprobación de seguridad
 
-#----------------usuarios ---------------------------------#
+if [ "$(whoami)" != "root" ]; then
+	echo "Error: Debes ser root para ejecutar este archivo" >&2
+	exit 1
+fi
 
-	cat $pwFileUsers >> $pwFile
+#Comprobación de coincidencias
 
-#----------------grupos -----------------------------------#
+var="$(awk -F'|' 'NR==FNR{c[$3]++;next};c[$3] > 0' $pwFile $pwFileUsers)" 
 
-	cat $groupFileUsers >> $groupFile
-
-#Hacemos lo mismo para el fichero de shadow con las contraseñas encriptadas, usando el mismo límite:
-
-#----------------passwords --------------------------------#
-
-	cat $shadowFileUsers >> $shadowFile
-
-#----------------group passwords --------------------------#
-
-	cat $gshadowFileUsers >> $gshadowFile
+if [ -z "$var" ]; then 
+	echo "no coincidences"
+else
+	echo $var
+fi
 
