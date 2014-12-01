@@ -4,7 +4,9 @@
 #es utilizar el flag de chown llamado --from
 
 newUsr=""
-oldUsr=""
+#en newUsr hay que poner root:root por ejemplo
+oldUsr="" 
+#en oldUsr hay que poner el nombre del usuario antiguo solo.
 filePath=""
 
 chown --from=oldUsr newUsr filePath  
