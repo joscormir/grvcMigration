@@ -14,3 +14,9 @@ chown --from=oldUsr newUsr filePath
 #comprueba si todo está en orden 
 ls -l
 
+#La forma anterior SOLO es posible si el documento tiene el fichero con un usuario y no con una UID del dispositivo.
+
+#Este es el comando que tenemos que utilizar para cambiarlo con la UID
+
+find /var/www/old_web -uid 33 -exec chown apache:apache {} +
+
