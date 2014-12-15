@@ -5,7 +5,7 @@
 #primero compruebo que soy root para poder realizar todas las operaciones descritas.
 
 if whoami=="root"; then
- echo "Nice, you can deal with this"; exit 1
+ echo "Nice, you can deal with this"
 else
  echo "please need to be root to do this"; exit 1
 fi
@@ -21,7 +21,7 @@ echo -n "We are going to proceed to delete user $userName and /home/$userName. A
 read answer
 
 if answer=="S"; then
- userdel -r userName
+ userdel -r $userName
  echo "$userName and his directory deleted"
 elif answer=="N"; then
  echo "Maybe next time"
