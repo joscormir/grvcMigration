@@ -20,9 +20,9 @@ userUID = id -u userName
 echo -n "We are going to proceed to delete user $userName and /home/$userName. Are you sure?[S/N]"
 read answer
 
-if [answer == "S"]; then
+if answer=="S"; then
  userdel -r userName
  echo "$userName and his directory deleted"
-elif [answer == "N"]; then
+elif answer=="N"; then
  echo "Maybe next time"
 fi
