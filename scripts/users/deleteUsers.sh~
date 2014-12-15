@@ -4,10 +4,10 @@
 
 #primero compruebo que soy root para poder realizar todas las operaciones descritas.
 
-if [$(whoami) == "root"]; then
- echo "Nice, you can deal with this"
+if whoami=="root"; then
+ echo "Nice, you can deal with this"; exit 1
 else
- echo "please need to be root to do this" ; exit 1
+ echo "please need to be root to do this"; exit 1
 fi
 
 #Comienza el script
