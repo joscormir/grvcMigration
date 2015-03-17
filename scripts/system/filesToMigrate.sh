@@ -1,36 +1,29 @@
 #! /bin/bash
+
+#Define variables to use in the script
+
+lastDate 	= "2014-09-19"
+actualDate 	= "2015-03-17"
+
+dirToSave = "/home/joscormir/Documentos/grvcMigration/scripts/system/"
+
 clear
 echo "Extracting files that have changed in /home"
 
 cd /home 
-find ./ -xdev -print0 | cpio -pa0V /home/joscormir/penDrive/httpd
+find . type f -newermt $lastDate ! -newermt $actualDate >> $dirtoSave/homeChanges.txt
 
-echo "copying php files"
+clear
+echo "Extracting files that have changed in /disk"
 
-cd etc/php.d
-
-find ./ -xdev -print0 | cpio -pa0V /home/joscormir/penDrive/php.d
-
-#here we copy just the php.ini file
-echo "copying php.ini"
-
-cd /etc
-
-cp php.ini /home/joscormir/penDrive
-
-echo "copying mysql files"
-
-cd /etc	
-echo "copying my.conf"
-
-cp my.cnf /home/joscormir/penDrive
-
-cd /var/lib/mysql
-
-find ./ -xdev -print0 | cpio -pa0V /home/joscormir/penDrive/mysql
-
-echo "finished"
+cd /disk 
+find . type f -newermt $lastDate ! -newermt $actualDate >> $dirtoSave/diskChanges.txt
 
 
+clear
+echo "Extracting files that have changed in /var"
 
+cd /var 
+find . type f -newermt $lastDate ! -newermt $actualDate >> $dirtoSave/varChanges.txt
 
+echo "Finished"

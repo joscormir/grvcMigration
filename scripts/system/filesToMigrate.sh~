@@ -1,9 +1,8 @@
-#
 #! /bin/bash
 clear
-echo "copying apache files"
+echo "Extracting files that have changed in /home"
 
-cd etc/httpd 
+cd /home 
 find ./ -xdev -print0 | cpio -pa0V /home/joscormir/penDrive/httpd
 
 echo "copying php files"
