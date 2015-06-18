@@ -4,48 +4,33 @@
 #Por ejemplo de ISO88591 a UTF8
 clear 
 
-read -r -p "introduzca la ruta de la carpeta cambio de charset" encodedDirectory
+read -r -p "introduzca la ruta(absoluta) de la carpeta cambio de charset: " encodedDirectory
 
-read -r -p "Introduzca el charset que quiera sustituir" fromCharset
+cd $encodedDirectory
 
-read -r -p "Introduzca el nuevo charset"  toCharset
+read -r -p "Introduzca el charset que quiera sustituir: " fromCharset
 
-#el script se ejecutará en la carpeta que se le diga
+read -r -p "Introduzca el nuevo charset: "  toCharset
 
-echo "Cambiando el encoding de los ficheros con extensión .html"
+#---------------------------------------------------------------------------------
 
-read -n1 -r -p "Presiona c para continuar o enter para saltar..." key
+echo "Cambiando el encoding de los ficheros con extensión .php"
+
+read -n1 -r -p "Presiona c para continuar o enter para saltar... " key
 if [ "$key" = 'c' ]; then
-	for file in $encodedDirectory/*
-		do
-  			file -i  $file 
-		done
+	for file in *.php; do
+		if [ `file -i "$file" | awk '{print $3;}'` = "charset=$fromCharset" ]; then
+			iconv -f $fromCharset -t $toCharset "$file" > "u.$file"
+			fileName=$file
+        	rm -f $file
+        	mv u.$file $fileName
+			echo "Convertido $fileName"
+        fi
+
+	done
 else
 	echo "has saltado el bloque"
 fi
 
-##Este primer if lo que hace es cerciorarse de que se está introduciendo la información de manera exacta, es decir, al llamar al script debe recibir un directorio de destino, el orginal encoding y el encoding de destino
-#if [ $# -ne 3 ]; then
-#	echo “No lo estás usando bien: “$0″ directorio_destino + encoding_original + encoding_deseado”
-#	exit
-#fi;
-#
-##Aqui se extraen las tres partes a tratar
-#
-#dir=$1
-#from=$2
-#to=$3
-#
-##Si no existe el directorio, se crea
-#
-#if [ ! -d $dir ]; then
-#mkdir $dir
-#fi
-#
-##Bucle donde se hace la conversión de todos los archivos de la carpeta
-#
-#for f in $( ls . ); do
-#	if [ -f $f ]; then
-#		iconv -f $from -t $to $f > $dir$f
-#	fi
-#done
+#Hay que repetir este bloque con todos los tipos de archivos 
+#Hay que hacer que trate archivos de manera recursiva
