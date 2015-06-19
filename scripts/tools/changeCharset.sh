@@ -26,11 +26,66 @@ if [ "$key" = 'c' ]; then
         	mv u.$file $fileName
 			echo "Convertido $fileName"
         fi
-
 	done
 else
 	echo "has saltado el bloque"
 fi
 
-#Hay que repetir este bloque con todos los tipos de archivos 
-#Hay que hacer que trate archivos de manera recursiva
+#---------------------------------------------------------------------------------
+
+echo "Cambiando el encoding de los ficheros con extensión .html"
+
+read -n1 -r -p "Presiona c para continuar o enter para saltar... " key
+if [ "$key" = 'c' ]; then
+	for file in *.html; do
+		if [ `file -i "$file" | awk '{print $3;}'` = "charset=$fromCharset" ]; then
+			iconv -f $fromCharset -t $toCharset "$file" > "u.$file"
+			fileName=$file
+        	rm -f $file
+        	mv u.$file $fileName
+			echo "Convertido $fileName"
+        fi
+	done
+else
+	echo "has saltado el bloque"
+fi
+
+#---------------------------------------------------------------------------------
+
+echo "Cambiando el encoding de los ficheros con extensión .htm"
+
+read -n1 -r -p "Presiona c para continuar o enter para saltar... " key
+if [ "$key" = 'c' ]; then
+	for file in *.htm; do
+		if [ `file -i "$file" | awk '{print $3;}'` = "charset=$fromCharset" ]; then
+			iconv -f $fromCharset -t $toCharset "$file" > "u.$file"
+			fileName=$file
+        	rm -f $file
+        	mv u.$file $fileName
+			echo "Convertido $fileName"
+        fi
+	done
+else
+	echo "has saltado el bloque"
+fi
+
+#---------------------------------------------------------------------------------
+
+echo "Cambiando el encoding de los ficheros con extensión .shtml"
+
+read -n1 -r -p "Presiona c para continuar o enter para saltar... " key
+if [ "$key" = 'c' ]; then
+	for file in *.shtml; do
+		if [ `file -i "$file" | awk '{print $3;}'` = "charset=$fromCharset" ]; then
+			iconv -f $fromCharset -t $toCharset "$file" > "u.$file"
+			fileName=$file
+        	rm -f $file
+        	mv u.$file $fileName
+			echo "Convertido $fileName"
+        fi
+	done
+else
+	echo "has saltado el bloque"
+fi
+
+#---------------------------------------------------------------------------------
