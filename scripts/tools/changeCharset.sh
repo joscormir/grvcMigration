@@ -4,7 +4,16 @@
 #Por ejemplo de ISO88591 a UTF8
 clear 
 
-read -r -p "introduzca la ruta(absoluta) de la carpeta cambio de charset: " encodedDirectory
+#-----------Necesitas ser root para ejecutar est script----------------------#
+
+if [ "$(whoami)" != "root" ]; then
+	echo "Error: Debes ser root para ejecutar este archivo" >&2
+	exit 1
+fi
+
+#---------------------------------------------------------------------------------
+
+read -r -p "Introduzca la ruta(absoluta) de la carpeta: " encodedDirectory
 
 cd $encodedDirectory
 
